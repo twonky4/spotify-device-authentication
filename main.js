@@ -70,12 +70,12 @@ function getClientHello(keys) {
 	        })
 	    }),
 		clientNonce: nonce,
-		padding: new Buffer([30])
+		padding: Buffer.from([30])
     })).finish();
 }
 
 function intToBuffer(val) {
-	let writeBuffer = Buffer(1);
+	let writeBuffer = Buffer.alloc(1);
 	writeBuffer[0] = val;
 	return writeBuffer;
 }
@@ -99,7 +99,7 @@ function getLogin(server, username, password) {
 			
 			let length = data.readInt32BE(0);
 
-	        let b = new Buffer(data.slice(4, length));
+	        let b = data.slice(4, length);
 
 	        let decodedMessage = APResponseMessage.decode(b);
 	
@@ -177,7 +177,7 @@ function getLogin(server, username, password) {
 			let length = data.readInt32BE(0);
 			acc.writeInt(length);
 	
-	        let b = new Buffer(data.slice(4, length));
+	        let b = data.slice(4, length);
 	        acc.write(b);
 
 	        let decodedMessage = APResponseMessage.decode(b);
@@ -207,7 +207,7 @@ function getLogin(server, username, password) {
 	        });
 	
 	        let clientResponsePlaintextBytes =  ClientResponsePlaintext.encode(clientResponsePlaintext).finish();
-			let buf = new Buffer(4);
+			let buf = Buffer.alloc(4);
 			buf.writeUInt32BE(4 + clientResponsePlaintextBytes.length, 0);
 			socket.write(buf);
 	
