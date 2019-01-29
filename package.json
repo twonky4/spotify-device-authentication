@@ -1,0 +1,38 @@
+{
+  "name": "spotify-device-authentication",
+  "version": "0.0.1",
+  "description": "logs in to spotify device api to get authentication blob",
+  "author": {
+    "name": "twonky4",
+    "email": "twonky4@gmx.de"
+  },
+  "contributors": [
+    {
+      "name": "twonky4",
+      "email": "twonky4@gmx.de"
+    }
+  ],
+  "homepage": "https://github.com/twonky4/spotify-device-authentication",
+  "license": "MIT",
+  "keywords": [
+    "spotify",
+    "device",
+    "authentication"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/twonky4/spotify-device-authentication"
+  },
+  "dependencies": {
+    "protobufjs": "6.8.8",
+    "request": "2.88.0",
+    "promise": "8.0.2",
+    "shannon": "0.0.1",
+    "uuid": "3.3.2"
+  },
+  "main": "main.js",
+  "bugs": {
+    "url": "https://github.com/twonky4/spotify-device-authentication/issues"
+  },
+  "readmeFilename": "README.md"
+}
