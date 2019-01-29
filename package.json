@@ -1,6 +1,6 @@
 {
   "name": "spotify-device-authentication",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "logs in to spotify device api to get authentication blob",
   "author": {
     "name": "twonky4",

@@ -13,8 +13,8 @@ const Accumulator = require(__dirname + '/accumulator');
 const Keys = require(__dirname + '/keys');
 const Cipher = require(__dirname + '/cipherpair');
 
-const KeyExchange = protobuf.loadSync('proto/keyexchange.proto');
-const Authentication = protobuf.loadSync('proto/authentication.proto');
+const KeyExchange = protobuf.loadSync(__dirname + '/proto/keyexchange.proto');
+const Authentication = protobuf.loadSync(__dirname + '/proto/authentication.proto');
 
 const ClientHello = KeyExchange.lookup('ClientHello');
 const BuildInfo = KeyExchange.lookup('BuildInfo');

@@ -11,6 +11,7 @@ credentialGenerator('yourUserName', 'yourPassword', function(err, val) {
 		console.log(err);
 	} else {
 		console.log(JSON.stringify(val));
+		// val is: {username: 'yourUserName', authType: 1, authData: Buffer}
 	}
 });
 ```
@@ -22,6 +23,7 @@ const credentialGenerator = require('spotify-device-authentication');
 credentialGenerator('yourUserName', 'yourPassword')
 	.then(function(val) {
 		console.log(JSON.stringify(val));
+		// val is: {username: 'yourUserName', authType: 1, authData: Buffer}
 	})
 	.catch(function(err) {
 		console.log(err);
